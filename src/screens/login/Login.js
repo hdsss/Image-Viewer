@@ -10,9 +10,9 @@ import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
 import FormHelperText from '@material-ui/core/FormHelperText';
 
-const username = "testuser";
-const password = "testpassword";
-const authToken = "IGQVJVQmFtWGtjbHI5dUU2M2hjNkxNR1RxLXpQemtPcUdLdm9wSEZAVM3Q5RjM3VkZAHR3oxUHQ3NGdBeUI1bXVzbVhOOHBJOVJDSnktcFhPRnZAfTXRIOVRQcTkxSHY4eTFLT195VUhuQlltb2FMUlhfY3czbzZAuc0d3QnJr";
+const username = "user";
+const password = "pass";
+const accessToken = "IGQVJVQmFtWGtjbHI5dUU2M2hjNkxNR1RxLXpQemtPcUdLdm9wSEZAVM3Q5RjM3VkZAHR3oxUHQ3NGdBeUI1bXVzbVhOOHBJOVJDSnktcFhPRnZAfTXRIOVRQcTkxSHY4eTFLT195VUhuQlltb2FMUlhfY3czbzZAuc0d3QnJr";
 
 class Login extends Component {
     constructor() {
@@ -53,6 +53,7 @@ class Login extends Component {
         }
         // redirect to home page if login is successful and
         // Store authtoken in Session Storage
+        sessionStorage.setItem("access-token", accessToken)
         this.props.history.push('/home');
     }
 
