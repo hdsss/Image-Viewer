@@ -12,7 +12,7 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 
 const username = "user";
 const password = "pass";
-const accessToken = "IGQVJVQmFtWGtjbHI5dUU2M2hjNkxNR1RxLXpQemtPcUdLdm9wSEZAVM3Q5RjM3VkZAHR3oxUHQ3NGdBeUI1bXVzbVhOOHBJOVJDSnktcFhPRnZAfTXRIOVRQcTkxSHY4eTFLT195VUhuQlltb2FMUlhfY3czbzZAuc0d3QnJr";
+const accessToken = "IGQVJXcU5LYVIybUxEUkxjQXNCeUljRlZAfZAlI0MTZAHdndaN2RJTjEzSS00ZAy1mVHFMTnpabjRvT0ZAoN2phOHlGVU1JZAkI5SjltTDhESVdxVWdtbTdsOTQ3TUM2WXpDZAkI3X0ktYnJWRlhIM2ZAob1QwUzk1VEtWR2c4YWJr";
 
 class Login extends Component {
     constructor() {

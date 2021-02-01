@@ -12,7 +12,7 @@ class Header extends Component {
                         <div className="header-logo">Image Viewer</div>
                         <div className="search-box-container">
                             <SearchIcon className="search-icon" />
-                            <Input className="search-input" id="search" type="text" placeholder="Search..." disableUnderline="true"></Input>
+                            <Input className="search-input" id="search" type="text" placeholder="Search..."></Input>
                         </div>
                     </header>
                 }
