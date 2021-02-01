@@ -12,7 +12,7 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 
 const username = "testuser";
 const password = "testpassword";
-const authToken = ""
+const authToken = "IGQVJVQmFtWGtjbHI5dUU2M2hjNkxNR1RxLXpQemtPcUdLdm9wSEZAVM3Q5RjM3VkZAHR3oxUHQ3NGdBeUI1bXVzbVhOOHBJOVJDSnktcFhPRnZAfTXRIOVRQcTkxSHY4eTFLT195VUhuQlltb2FMUlhfY3czbzZAuc0d3QnJr";
 
 class Login extends Component {
     constructor() {
@@ -43,12 +43,17 @@ class Login extends Component {
         if (this.state.username === "" || this.state.password === "") {
             return;
         }
+        // update loginSuccess if login is successfull, otherwise return
         if (username === this.state.username || password === this.state.password) {
             this.state.loginSuccess = true;
         }
         else {
             this.state.incorrectLogin = true;
+            return;
         }
+        // redirect to home page if login is successful and
+        // Store authtoken in Session Storage
+        this.props.history.push('/home');
     }
 
 
@@ -71,7 +76,7 @@ class Login extends Component {
                         <br /><br />
                         <FormControl required className="formControl">
                             <InputLabel htmlFor="password">Password</InputLabel>
-                            <Input id="password" type="text" password={this.state.password} onChange={this.inputLoginPasswordChangeHandler} />
+                            <Input id="password" type="password" password={this.state.password} onChange={this.inputLoginPasswordChangeHandler} />
                             <FormHelperText className={this.state.reqPassword}>
                                 <span className="red">Required</span>
                             </FormHelperText>
